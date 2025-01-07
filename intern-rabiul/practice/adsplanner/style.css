@@ -1,0 +1,59 @@
+.container {
+  background: yellow;
+  height: fit-content;
+  width: 500px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.headline {
+  text-transform: capitalize;
+  font-family: sans-serif;
+  color: darkblue;
+}
+
+input{
+  height: 30px;
+}
+.btn{
+  padding: 8px;
+  background: lemonchiffon;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+.btn:hover{
+  background: lightblue;
+}
+
+#output{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: lightblue;
+  padding: 15px;
+ margin: 0 auto;
+ border-radius: 10px;
+}
+.navbar li a{
+  text-decoration: none;
+  background: lightcoral;
+  padding: 15px;
+  color: black;
+
+}
+.navbar li {
+  list-style-type: none;
+  
+}

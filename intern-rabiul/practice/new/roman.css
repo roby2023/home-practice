@@ -1,0 +1,18 @@
+.container {
+  background: yellow;
+  height: fit-content;
+  width: 500px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.headline {
+  text-transform: capitalize;
+  font-family: sans-serif;
+  color: darkblue;
+}

@@ -1,0 +1,103 @@
+*{
+	margin:0;
+	
+}
+
+
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 26.11px 43.83px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  margin: 4px 2px;
+  cursor: pointer;
+  background:white;
+  color:black;
+  border-radius:26px;
+  margin-top: 45px;
+  font-weight: 500;
+  
+  width:305px;
+  height:94px;
+  
+  
+    font-family: Inter;
+	font-size: 29.84px;
+	
+	line-height: 33.72px;
+	
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+
+}
+
+
+
+.all_content {
+    color: white;
+    line-height: 1.5;
+    position: absolute;
+    top: 70px;
+    right: 70px;
+}
+
+.arrow {
+    margin-left: 8px;
+}
+
+h1.green {
+    font-size: 40px;
+}
+.green_div {
+  
+margin-bottom: 54px;
+  
+display: flex;
+  
+justify-content: flex-end;
+}
+
+p.paragraph {
+    width: 70%;
+    font-family: DM sans;
+    font-size: 75.46px;
+    font-weight: 600;
+    line-height: 85.27px;
+    letter-spacing: -2px;
+    text-align: right;
+    display: inline-block;
+}
+
+span.lemon_text {
+    background: #7DC500;
+    padding: 0px 11px;
+}
+.background_image {
+    position: relative;
+}
+
+section.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+	
+.svg_arrow {
+    margin-left: 22px;
+}	
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+	
+	
+	
+	
+	

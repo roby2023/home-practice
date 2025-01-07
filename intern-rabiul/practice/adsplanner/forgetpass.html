@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: sans-serif;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+  /* Full-width input fields */
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn,
+  .signupbtn {
+    float: left;
+    width: 50%;
+    border-radius: 15px;
+  }
+
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+
+  /* Clear floats */
+  .clearfix {
+    display: flex;
+    gap: 30px;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+
+  .form {
+    width: 35%;
+    border-radius: 15px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+
+  .btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  .btn_see {
+
+    background-color: aqua;
+  }
+</style>
+
+<body>
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <p id="alertText">This is a Pop Up Notification</p>
+      <button onclick="closeAll()" class="btn" type="button" id="modalBtn">Ok</button>
+    </div>
+
+  </div>
+
+
+  <div class="modal1" id="myModal1">
+    
+    <form name="resetForm" method="post" style="border:1px solid #ccc" class="form" id="change_pass_form">
+      <div class="container">
+        <h1>Forget Password</h1>
+        <hr>
+        <label for="psw"><b>New Password</b></label>
+        <input type="password" placeholder="Enter Password" name="newPassword" required id="forgot_password">
+
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button onclick="openAll()" type="button" class="signupbtn" id="changepass">Change</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="forgetPass.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="test">Hello</p>
+  <p id="test1">Hello world</p>
+  <p>The sum of 5 and 6 is: <span id="test2"> </span></p>
+  <p id="test3"></p>
+  <p id="test4"></p>
+  <p id="test5"></p>
+  <p id="test6"></p>
+  <p id="test7"></p>
+  <p id="test8"></p>
+  <p id="test9"></p>
+  <p id="test10"></p>
+  <p id="test11"></p>
+  <p id="test12"></p>
+
+
+
+  <button type="button" onclick="change()">Change word 2nd line</button>
+
+  <button onclick="window.print()">print</button>
+
+
+  <br> <br>
+  <div class="container">
+    <h1>Roman number to integer</h1>
+    <input type="text" placeholder="e.g XII" id="romaninput">
+    <button onclick="convert()">Result</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    document.getElementById("test").innerHTML = "Hello world"
+    function change() {
+      document.getElementById("test1").innerHTML = "Hello Bangladesh"
+    }
+    ;
+    document.getElementById("test2").innerHTML = 5 + 6;
+    let x, y, z;
+    x = 5;
+    y = 9;
+    z = x + y;
+    document.getElementById("test3").innerHTML = "the value of z is: " + z
+
+    const pi = 3.1416
+    let person = "Rabiul Alam"
+    let answer = "Yes, I am"
+    document.getElementById("test4").innerHTML = pi + "<br>" + person + "<br>" + answer
+
+    //create an object
+    const food = { type: "sweet", name: "apple", color: "green" };
+    food.color = "blue";
+    food.owner = "Roby"
+    document.getElementById("test5").innerHTML = food.owner + "<br> " + food.color + " " + food.type + " " + food.name;
+
+    const arr = ["roby", "miraj", "sumon", "shakil"];
+    document.getElementById("test6").innerHTML = arr
+
+    function toCelsius(f) {
+      xyz = (5 / 9) * (f - 32);
+      document.getElementById("test6").innerHTML = "the temperature is: " + xyz;
+    }
+    toCelsius(300);
+    function toCelsiu(f) {
+      return (5 / 9) * (f - 32);
+
+    }
+    document.getElementById("test7").innerHTML = toCelsiu(100)
+
+    const roby = {
+      firstName: "Rabiul",
+      lastName: "Alam",
+      id: 123456,
+      fullName: function () {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+      }
+    };
+    document.getElementById("test8").innerHTML = roby.fullName();
+
+    obct = {
+      name: "roby",
+      place: "Bagerhat",
+      birth: "24-11-1997",
+      id: 76543
+    }
+    const myArray = Object.values(obct);
+    document.getElementById("test10").innerHTML = myArray;
+    let text = '';
+    for (let x in obct) {
+      text = text + obct[x] + " ";
+    }
+    document.getElementById("test9").innerHTML = text;
+
+    const fruitPrice = {
+      bananas: 300, Orange: 400, Apples: 300
+    };
+    let bucket = '';
+    for (let [fruit, price] of Object.entries(fruitPrice)) {
+      bucket = bucket + fruit + ": " + price + "<br>";
+    }
+    document.getElementById("test11").innerHTML = bucket;
+    const user_data = {
+      name: "Roby",
+      age: 27,
+      city: "Khulna",
+      hometown: "bagerhat"
+
+    };
+    let myData = JSON.stringify(user_data);
+    document.getElementById("test12").innerHTML = myData;
+
+
+    function roman(s) {
+
+      let x = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+      let ttl = 0;
+      for (let i = 0; i < s.length; i++) {
+        if (x[s[i]] < x[s[i + 1]]) {
+          ttl -= x[s[i]];
+        }
+        else {
+          ttl += x[s[i]];
+        }
+      }
+      return ttl;
+
+    };
+
+    function convert() {
+      const roman_input = document.getElementById("romaninput").value;
+      const roman_result = document.getElementById("output")
+      const res = roman(roman_input.toUpperCase());
+      roman_result.textContent = `The Integer number is: ${res}`
+    }
+
+
+  </script>
+</body>
+
+</html>

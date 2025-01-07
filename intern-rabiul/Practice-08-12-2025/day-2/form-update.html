@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	* {
+	margin: 0;
+	padding: 0;
+	}
+	body{
+		background:#071429;
+	}
+	.main{
+		background:#071429;
+		height:	100%;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		
+	}
+	.upper-part{
+		
+		background:white;	
+		height:300px;
+		display:flex;
+		justify-content: space-between;
+		
+	}
+	.footer-part{
+	
+	}
+	.nav-right{
+		
+	}
+	.chk-box{
+		
+	}
+	ul li {
+		float:left;
+		list-style-type: none;
+		padding:10PX;
+		
+	}
+	ul li:hover {
+		background:lightgray;
+		
+	}
+	ul li a{
+		text-decoration:none;
+		color:black;
+	}
+	.btn{
+		list-style-type: none;
+		padding:10PX;
+		width:200px;
+		margin-right:100px;
+	}
+	.btn-li{
+		list-style-type: none;
+		padding:20px;
+		margin-right:500px;
+	}
+	li.calculate-li {
+		background:#D5DEFF;
+		border-radius:20px;
+		padding:3px;
+		margin-top: 7px;
+	}
+	.nav-right{
+		width:400px;
+	}
+	top-right{
+		width:500px
+	}
+	#contact{
+	color:blue;
+	padding: 5px;
+	}
+	.nav-bar ul{
+		margin-top:15px;
+		padding-left: 550px;
+		
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	.form{
+		width:500px;
+		height:700px;
+		background:white;
+		z-index:1;
+		margin-top:-180px;
+		margin-left: 34%;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border-radius:10px;
+		padding:20px;
+	}
+	#star{
+		color:red;
+	}
+	.get-in-touch{
+		padding:20px;
+		margin-bottom:20px;
+		text-align:center; 
+		font-size:30px;
+	}
+	::placeholder {
+		color: green;
+		opacity: 0.3;
+		
+	}
+	.input-field{
+		width:100%;
+		padding:7px;
+		
+	}
+	.div-padding-input{
+		padding:5px
+	}
+	.chk-box{
+		display:flex;
+		margin-bottom: 25px;
+	}
+	.chkbox-border{
+		border:1px solid green;
+		height:15px;
+		width:15px;
+		padding:1px ;
+	}
+	.chk-box-align{
+		margin-right: 10px;
+	}
+	.align{
+		margin-top:20px;
+		margin-bottom:15px;
+		margin-left: 5px;
+	}
+	.btn-submit{
+		width:400px;
+		color:white;
+		background: #01008B;
+		border-radius: 5px;
+		margin-top: 15px;
+		margin-left: 50px;
+		height: 35px;
+	}
+
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="upper-part">
+		<div class="nav-bar">
+			<ul>
+				<li>
+					<div class="dropdown">
+						<button class="dropbtn">Service</button>
+						<div class="dropdown-content">
+							<a href="#">Link 1</a>
+							<a href="#">Link 2</a>
+							<a href="#">Link 3</a>
+						</div>
+						
+						
+					</div>
+					
+					
+				
+				</li>
+				
+				<li><a href="#news">Profit Amplifire</a></li>
+				<li class="calculate-li"><a href="#calculate" id="unique">Calculate</a></li>
+				<li><a href="#contact" id="contact">Contact Us</a></li>
+				
+			</ul>
+		</div>
+		<div class="nav-right">
+			<div class="top-right">
+				<li class="btn-li"><a href="#about"><button type="button" class="btn" >Schedule Free Consultation</button></a></li>
+			</div>
+		</div>
+	</div>
+	<div class="form">
+		<form >
+				<p class="get-in-touch">Get in touch </p>
+				<div class="div-padding-input"><input type="text" class="input-field "  placeholder="Company"></div>
+				
+				<div style="display:flex; " >
+					<div style="margin-right:4px;width:100%; margin-right:10px "  class="div-padding-input">
+						<input type="text"class="input-field"   placeholder="First Name">
+					</div>
+					<div  class="div-padding-input" style="width:100%;">	
+						<input type="text"class="input-field"  placeholder="Last Name">
+					</div>
+				</div>
+				
+				<div  id="form-input">
+					<div class="div-padding-input"><input type="email" class="input-field" placeholder="Email"></div>
+					<div  class="div-padding-input"><input type="text" class="input-field" placeholder="Number"></div>
+					<div class="div-padding-input"><input type="text" class="input-field" placeholder="Website"></div>
+					<div class="div-padding-input"><input type="text" class="input-field" placeholder="Website"></div>
+					<div class="div-padding-input"><textarea placeholder="Write your message" class="input-field" id="area" style="width:100%;"></textarea></div>
+					
+					
+					
+				</div>
+				
+				<div class="align"><h3>Terms & Condition <span id="star">*</span></h3></div>
+			<div class="chk-box">
+				<div class="chk-box-align"><lebel ><input type="checkbox" class="chkbox-border"></lebel></div>
+				<div><p> By submitting this form you are to recieve communications from Opportuna Digital via mail
+				,phone or SMS in according with our Terms & conditions. You may opt out at any time</p></div>
+			</div>
+			<div><button type="submit" class="btn-submit" >Submit</button></div>
+		</form>
+		
+	</div>
+</div>
+
+
+</body>
+</html>
