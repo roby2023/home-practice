@@ -132,6 +132,9 @@
     margin-top: 10px;
   }
 
+
+  
+
   .btn_see {
 
     background-color: aqua;
@@ -141,8 +144,23 @@
 <body>
   <div class="modal" id="myModal">
     <div class="modal-content">
-      <p id="alertText">This is a Pop Up Notification</p>
-      <button onclick="closeAll()" class="btn" type="button" id="modalBtn">Ok</button>
+      <p id="alertText">No password found in Localstorage</p>
+      <button  class="btn" type="button" id="modalBtn">Ok</button>
+    </div>
+
+  </div>
+
+  <div class="modal" id="myModal2">
+    <div class="modal-content">
+      <p id="alertText">You entered old password</p>
+      <button class="btn" type="button" id="modalBtn1">Ok</button>
+    </div>
+
+  </div>
+  <div class="modal" id="myModal3">
+    <div class="modal-content">
+      <p id="alertText">Password update successfully...</p>
+      <button class="btn" type="button" id="modalBtn2">Ok</button>
     </div>
 
   </div>
