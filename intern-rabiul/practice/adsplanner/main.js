@@ -14,7 +14,15 @@ const makeModal=(text, action=()=>{})=>{
     
 
 }
-
+function modalCancel(){
+  document.getElementById("modalBtn1").addEventListener("click",function(event){
+    // console.log("clicked")
+    
+    event.preventDefault();
+    document.getElementById("myModal").style.display = "none";
+    return;
+  })
+}
 
 
 
@@ -53,13 +61,7 @@ function deleteAccount(){
       window.location.replace("signup.html");
       return;
     })
-    document.getElementById("modalBtn1").addEventListener("click",function(event){
-      // console.log("clicked")
-      
-      event.preventDefault();
-      document.getElementById("myModal").style.display = "none";
-      return;
-    })
+    modalCancel();
     return;
      
 
