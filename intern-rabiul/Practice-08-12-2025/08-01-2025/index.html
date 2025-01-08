@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>String length </h1>
+  <input id="test"></input>
+  <button onclick="x()">See</button>
+  <p id="output"></p>
+
+  <h1>Know the letter index </h1>
+  <p>Enter your text and click see</p>
+  <input id="test1"></input>
+  <button onclick="a()" >See</button>
+  <p id="output1"></p>
+  <p>Enter your Index</p>
+  <input id="test2"></input>
+  <button onclick="b()">click</button>
+  <p id="output2"></p>
+
+<script>
+  
+  function x(){
+    let text=document.getElementById("test").value.trim();
+    document.getElementById("output").innerText=text.length;
+  }
+  function a(){
+    let text= document.getElementById("test1").value;
+    document.getElementById("output1").innerText=text;
+  }
+  function b(){
+    let text= document.getElementById("test1").value; //user input like abcbdbd
+    let indexInput= parseInt(document.getElementById("test2").value);//1/2/3
+   
+    if(isNaN(indexInput)){
+      document.getElementById("output2").innerText= "is not a number";
+    }
+    else{
+     
+      document.getElementById("output2").innerText=text.charAt(indexInput-1)
+    }
+  }
+</script>
+</body>
+</html>

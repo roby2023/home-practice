@@ -1,3 +1,23 @@
+const getElement=(id)=>{
+  return document.getElementById(id)
+}
+const makeModal=(text, action=()=>{})=>{
+  getElement("myModal").style.display = "block";
+  document.getElementById("alertText").innerText=text
+    // window.location.href = 'login.html'
+    document.getElementById("modalBtn").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.getElementById("myModal").style.display = "none";
+      action();
+      return;
+    });
+    
+
+}
+
+
+
+
 function roman(s) {
 
   let x = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
@@ -26,11 +46,35 @@ function deleteAccount(){
   let storedEmail = localStorage.getItem('sign_up_mail');
   let storedPass = localStorage.getItem('sign_up_password');
   if(storedUsername && storedEmail && storedPass ){
-    localStorage.removeItem('sign_up_user_name');
-    localStorage.removeItem('sign_up_mail');
-    localStorage.removeItem('sign_up_password');
+    makeModal("Are you sure to delete account",()=>{
+      localStorage.removeItem('sign_up_user_name');
+      localStorage.removeItem('sign_up_mail');
+      localStorage.removeItem('sign_up_password');
+      window.location.replace("signup.html");
+      return;
+    })
+    document.getElementById("modalBtn1").addEventListener("click",function(event){
+      // console.log("clicked")
+      
+      event.preventDefault();
+      document.getElementById("myModal").style.display = "none";
+      return;
+    })
+    return;
+     
+
   }
-  window.location.replace("signup.html");
+  // else{
+  //   document.getElementById("modalBtn1").addEventListener("click",function(event){
+  //     console.log("clicked")
+      
+  //     event.preventDefault();
+  //     document.getElementById("myModal").style.display = "none";
+  //   })
+    
+  // }
+  return;
+ 
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {

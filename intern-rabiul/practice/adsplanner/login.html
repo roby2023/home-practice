@@ -91,10 +91,54 @@
     align-items: center;
     padding: 15px;
   }
+
+
+
+  /* modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+
+  .btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
  
 </style>
 
 <body>
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <p id="alertText"></p>
+      <button class="btn" type="button" id="modalBtn">Ok</button>
+    </div>
+  </div>
+
   <form action="#" method="post" class="login_form" id="login_form">
     
     <div class="container">

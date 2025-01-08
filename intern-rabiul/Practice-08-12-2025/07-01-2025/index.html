@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert</title>
+</head>
+<style>
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+
+  .btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+  .btn_see{
+    
+    background-color: aqua;
+  }
+  .btn_see{
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+  .btn_see_option{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 900;
+  }
+
+</style>
+
+<body>
+  <div id="seebtn" class="btn_see_option">
+    <h1>Pop Up</h1>
+    <button  type="button" onclick="openAll()" class="btn_see">See</button>
+  </div>
+ 
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <p id="alertText">This is a Pop Up Notification</p>
+      <button onclick="closeAll()" class="btn" type="button">Ok</button>
+    </div>
+
+  </div>
+ 
+<script src="popUp.js"></script>
+</body>
+
+</html>

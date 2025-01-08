@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+ body p {
+    text-align: center;
+    background: yellow;
+    padding: 5px;
+  }
+</style>
+
+<body>
+  <p id="demo"></p>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+ 
+  <script>
+    const x = new Object();
+    x.name = "Roby"
+    x.work = "Monday Digital"
+   
+    document.getElementById("demo").innerHTML = x.name + " - " + x.work
+
+    const car = {
+      type: "toyota",
+      model: "500",
+      color: "white"
+    };
+    car.milage="10km/h"
+    delete car["type"]//delete car.type
+
+    const person1 = {
+      firsN: "Rabiul",
+      lastN: "Alam",
+    
+      fullN: function () {
+        return this.firsN + " " + this.lastN;
+      }
+
+    }
+    document.getElementById("demo3").innerHTML = person1.fullN()
+
+    document.getElementById("demo2").innerHTML =
+      "The car type is " + car.type +' ' + car.milage;
+    const person = {};
+
+
+    person.firstName = "Rabiul";
+    person.lastName = "Alam";
+    person.age = 27;
+    person.eyeColor = "black";
+
+
+    document.getElementById("demo1").innerHTML =
+      person.firstName + " is " + person.age + " years old.";
+  </script>
+</body>
+
+</html>
