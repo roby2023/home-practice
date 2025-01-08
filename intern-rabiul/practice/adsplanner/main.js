@@ -63,8 +63,6 @@ function deleteAccount(){
     })
     modalCancel();
     return;
-     
-
   }
   // else{
   //   document.getElementById("modalBtn1").addEventListener("click",function(event){
