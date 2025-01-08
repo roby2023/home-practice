@@ -6,6 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p>Match if the word found in sentence</p>
+<p>I love Cats. Cats are very easy to love. Cats are very popular.</p>
+<p id="test"></p>
+
+<h1>JavaScript Template Strings</h1>
+<p id="test1"></p>
+<p id="test2"></p>
+<script>
+let text = "I love Cats. Cats are very easy to love. Cats are very popular."
+const container = text.matchAll("Cats");
+
+document.getElementById("test").innerHTML = Array.from(container);
+
+let firstName = "Rabiul";
+let lastName = "Alam";
+
+let text1 = `Welcome ${firstName}, ${lastName}!`;
+
+document.getElementById("test1").innerHTML = text1;
+
+let header = "Template Strings";
+let tags = ["template strings", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
+document.getElementById("test2").innerHTML = html;
+</script>
 </body>
 </html>
